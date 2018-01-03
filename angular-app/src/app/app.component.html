@@ -1,0 +1,46 @@
+<div>
+	<!-- Disclaimer -->
+	<!--<div style="background-color: white">
+		<i><span>Angualar app under construction</span></i>
+		<hr>
+	</div>-->
+
+	<!-- Page content -->
+	<div>
+		<router-outlet></router-outlet>
+	</div>
+
+	<!-- Navigation bar> -->
+	<footer class="fixed-bottom">
+		<!--<nav class="navbar fixed-bottom navbar-toggleable-md" style="background-color: white">
+			
+			<button type="button" class="btn btn-outline-dark" [routerLink]="['/home']" >Home</button>
+			<button type="button" class="btn btn-outline-dark" [routerLink]="['/overview']" >Overview</button>
+  			<button type="button" class="btn btn-outline-dark" >Topics</button>
+			<button type="button" class="btn btn-outline-dark" >Personal</button>
+
+  			<button type="button" class="btn btn-outline-dark" [routerLink]="['/contact']" >Get in touch</button>
+		</nav>	-->
+
+		<mat-toolbar  style="background-color: white; color: red; opacity: 0.8">
+
+			<button mat-raised-button [routerLink]="['/home']">Home</button>
+			<button mat-raised-button [routerLink]="['/overview']">Project overview</button>
+			
+			<button mat-raised-button [matMenuTriggerFor]="appMenu">Topics</button>
+			<mat-menu #appMenu="matMenu">
+				<button mat-menu-item> Settings </button>
+				<button mat-menu-item> Help </button>
+				<button mat-menu-item> </button>
+			</mat-menu>
+
+			<span class="my-spacer"></span>
+
+			<button mat-raised-button color="accent" class="my-icon">LinkedIn</button>
+			<button mat-raised-button color="accent" class="my-icon">Twitter</button>
+			<button mat-raised-button color="accent" class="my-icon">Medium</button>
+		</mat-toolbar>
+	</footer>
+
+	
+</div>
